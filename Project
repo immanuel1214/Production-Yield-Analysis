@@ -1,0 +1,26 @@
+import pandas as pd
+Import natplotlib.pyplot as plt
+0 Sanple data
+'Daço': pd.date_range(start='2025-04-01', pariods=10, freqe'D'),
+'Unlts_Produced' : [1000, 980, 1020, 990, 1005, 1015, 1000, 970, 985, 995),
+'Good_Units' :
+[, s6, 00, 97,m90,995,985,940, 960, 980
+df = pd.DataFrame(data)
+0 Calculote Yield
+df('Yield (X) ') = (df('Good_Units') / df( 'Units_Produced']) • 100
+o Sot yiold threshold threshold e 95
+o Find days with low yield lon yiold_days a dflafl'Yiold (%)') < threshold)
+if not lou yiold_days.cmpty:
+print(° Alert: Yield dropped below 95% on the follaring days: \n*) print (lon yield_days(('Date', 'Yield (S) 'J))
+else:
+print(° All days eot tho yiold targot.")
+# Plot yield over time plt. figure (figsize=(10, 6))
+plt.plot(df('Dato'), df('Yield (X)'), aarkere'o', Linestylos'-', color='green', labele'Yiold') plt. achline(y=threshold, color='red', linestylez'--', labelsf'Target Yield ((throshold)s)')
+# Highlight lou yield points
+ple scatter (louyiold day('Dato'), lougiold day(riold (A)"), colora red', sonderas, Labela dola Targal')
+ple. title('Daily Production Yield (X) *) ple. xlabel('Dato')
+ple. ylabel('Yield (s)')
+ple.ylia(20, 100)
+ple. grid (True) ple. logand)
+plt.tlghtlayout ()
+plt. show()
